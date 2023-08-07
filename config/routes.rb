@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
+  # http_verb '/path', to: 'controller#action', as: :prefix
+  root to: 'flats#index'
+  get '/flats/:id', to: 'flats#show', as: :flat
 end
+
+# Read All -> index
+# Read One -> show

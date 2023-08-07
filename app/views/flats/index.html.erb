@@ -1,0 +1,20 @@
+<div class="container">
+  <h1>Flats</h1>
+  <div class="cards">
+    <% @flats.each do |flat| %>
+      <!-- flat is a HASH -->
+      <%#= link_to flat_path(flat['id']) do  %>
+        <div class="card-trip">
+          <%= image_tag flat['imageUrl'], alt: "text" %>
+          <div class="card-trip-infos">
+            <div>
+              <h2><%= flat['name'] %></h2>
+            </div>
+            <h2 class="card-trip-pricing">£<%= flat['price'] %></h2>
+          </div>
+          <%= link_to '', flat_path(flat['id']), class: 'card-trip-link' %>
+        </div>
+        <%# end %>
+      <% end %>
+    </div>
+  </div>

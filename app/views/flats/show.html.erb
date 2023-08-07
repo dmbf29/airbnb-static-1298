@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="card-trip">
+    <%= image_tag @flat['imageUrl'], alt: "text" %>
+    <div class="card-trip-infos">
+      <div>
+        <h2><%= @flat['name'] %></h2>
+      </div>
+      <h2 class="card-trip-pricing">£<%= @flat['price'] %></h2>
+    </div>
+  </div>
+  <p>
+    <!-- Text link -->
+    <%= link_to "Home", root_path, class: 'btn btn-light'  %>
+    <!-- Icon link -->
+    <%= link_to root_path, class: 'btn btn-light'  do %>
+      <i class="fa-solid fa-house"></i>
+    <% end %>
+  </p>
+</div>
